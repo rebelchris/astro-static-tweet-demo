@@ -1,0 +1,136 @@
+---
+import { StaticTweet } from '@rebelchris/astro-static-tweet';
+import { Markdown } from 'astro/components';
+const title = 'Astro Static Tweet component';
+---
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/style/global.css">
+    <link rel="stylesheet" href="/style/home.css">
+
+    <style>
+        header {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            max-width: min(100%, 68ch);
+        }
+        article {
+        padding-top: 2em;
+        line-height: 1.5;
+    }
+    section {
+        padding: 1em 1.5em;
+                background: var(--color-light);
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        max-width: 70ch;
+    }
+    .banner {
+        text-align: center;
+        font-size: 1.2rem;
+        background: var(--color-light);
+        padding: 1em 1.5em;
+        padding-left: 0.75em;
+        border-radius: 4px;
+    }
+    pre,
+    code {
+        font-family: var(--font-mono);
+        background: var(--color-light);
+        border-radius: 4px;
+    }
+    pre {
+        padding: 1em 1.5em;
+    }
+    .tree {
+        line-height: 1.2;
+    }
+    code:not(.tree) {
+        padding: 0.125em;
+        margin: 0 -0.125em;
+    }
+    footer {
+        font-size: 0.75rem;
+        text-align: center;
+        padding-top: 2rem;
+    }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <div>
+                <div>
+                <img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
+                🦉
+                </div>
+                <h1><a href="https://astro.build/">Astro</a> Static Tweet Demo</h1>
+            </div>
+        </header>
+
+        <article>
+    <div class="banner">
+        <p>Wondering how to use this?<br />
+        <a href="https://github.com/rebelchris/astro-static-tweet#readme" target="_blank">Astro Static Tweet readme</a></p>
+    </div>
+
+    <section>
+        <h2>Quickstart</h2>
+
+        <Markdown>
+            ```bash
+            npm i @rebelchris/astro-static-tweet
+            ```
+
+            ```jsx
+            ---
+            import { StaticTweet } from '@rebelchris/astro-static-tweet'
+            ---
+            <StaticTweet id="1359064894377762816" />
+            ```
+        </Markdown>
+    </section>
+
+    <section>
+        <strong>Example 1: <i>Basic text tweet</i></strong>
+
+        <Markdown>
+            `<StaticTweet id="1417076547375222785" />`
+        </Markdown>
+
+        <StaticTweet id="1417076547375222785" />
+    </section>
+
+        
+        
+        <section>
+
+        <strong>Example 2: <i>Reply to other tweet</i></strong>
+        <Markdown>
+            `<StaticTweet id="1417090498695663617" />`
+        </Markdown>
+
+        <StaticTweet id="1417090498695663617" />
+        </section>
+
+        <section>
+
+        <strong>Example 3: <i>Tweet with image</i></strong>
+        <Markdown>
+            `<StaticTweet id="1415310083400024065" />`
+        </Markdown>
+        <StaticTweet id="1415310083400024065" />
+</section>
+    </main>
+    <footer>
+        Made with ❤️ by <a href="https://daily-dev-tips.com/" target="_blank">Chris Bongers</a> using <a href="https://astro.build/" target="_blank">Astro 🚀</a>.
+    </footer>
+</body>
+</html>
