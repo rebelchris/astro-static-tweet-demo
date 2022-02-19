@@ -12,4 +12,9 @@ export default {
     // tailwindConfig: '', // Path to tailwind.config.js if used, e.g. './tailwind.config.js'
   },
   renderers: [],
+  vite: {
+    ssr: {
+      external: ['twitter-api-client'],
+    },
+  },
 };

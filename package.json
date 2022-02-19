@@ -7,9 +7,10 @@
     "build": "astro build"
   },
   "devDependencies": {
-    "astro": "^0.17.3"
+    "astro": "0.23.0-next.10"
   },
   "dependencies": {
-    "@rebelchris/astro-static-tweet": "^0.0.5"
+    "@rebelchris/astro-static-tweet": "^0.0.8",
+    "sass": "^1.49.8"
   }
 }
